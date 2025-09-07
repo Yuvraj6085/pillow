@@ -1,0 +1,10 @@
+from PIL import Image
+size = (40, 40)
+img = Image.open(r"krish.jpg")
+print("Original size of the image")
+print(img.size)
+r_img = img.resize(size, resample = Image.BILINEAR)
+r_img.save("resized_test.jpg")
+img = Image.open(r"resized_test.jpg")
+print("\nNew size of the image")
+print(img.size)
